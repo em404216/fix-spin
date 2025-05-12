@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FixSpin - صيانة الغسالات</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+      rel="stylesheet"
+    />
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap"
+      rel="stylesheet"
+    />
+<!-- swiper -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+ <!-- font awosome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-custom fixed-top shadow-sm"
+      data-aos="fade-down"
+      data-aos-duration="1000"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="#"
+          data-aos="zoom-in-left"
+          data-aos-delay="200"
+          >Fix<span style="color: white">Spin</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-between"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item" data-aos="fade-left" data-aos-delay="300">
+              <a class="nav-link" href="#">الرئيسية</a>
+            </li>
+            <li class="nav-item" data-aos="fade-left" data-aos-delay="400">
+              <a class="nav-link" href="#offers">الخدمات</a>
+            </li>
+             <li class="nav-item" data-aos="fade-left" data-aos-delay="400">
+              <a class="nav-link" href="#advanages">لماذا نحن</a>
+            </li>
+            <li class="nav-item" data-aos="fade-left" data-aos-delay="600">
+              <a class="nav-link" href="#reviwes">آراء العملاء</a>
+            </li>
+            <li class="nav-item" data-aos="fade-left" data-aos-delay="700">
+              <a class="nav-link" href="#footer">اتصل بنا</a>
+            </li>
+          </ul>
+          <a
+            href="#"
+            class="btn btn-book"
+            data-aos="fade-left"
+            data-aos-delay="800"
+            >احجز الآن</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- hero section -->
+    <section id="hero">
+      <div class="hero-bg"></div>
+      <div class="overlay"></div>
+      <div class="hero-content animated-content">
+        <h1 class="headline-glow">خدمة صيانة الغسالات بأعلى جودة</h1>
+        <div class="rotating-text">
+          <span>خبرة واحترافية</span>
+          <span>خدمة سريعة وفعالة</span>
+          <span>راحة البال تبدأ معنا</span>
+        </div>
+        <p class="fade-in">نحن هنا لإعادة تشغيل غسالتك بكفاءة</p>
+        <a href="#contact" class="btn btn-primary mt-4 cta-pulse">ابدأ الآن</a>
+      </div>
+    </section>
+    <!-- offers -->
+    <section class="services-section py-5" id="offers">
+      <div class="container">
+        <h2
+          class="section-title text-center mb-5"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          خدماتنا الاحترافية
+        </h2>
+
+        <div class="row g-4">
+          <!-- Service Card 1 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="service-card glass-effect">
+              <div class="service-image">
+                <img src="./img/item-2.jpeg" alt="صيانة الغسالات" />
+              </div>
+              <div class="service-content">
+                <h3>🛠️ صيانة متكاملة للغسالات</h3>
+                <p>
+                  نقدم خدمات صيانة دقيقة للغسالات بجميع أنواعها، مع ضمان سرعة
+                  الأداء والجودة.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="service-card glass-effect">
+              <div class="service-image">
+                <img src="./img/item-3.jpeg" alt="إصلاح الأعطال الكهربائية" />
+              </div>
+              <div class="service-content">
+                <h3>🔌 إصلاح الأعطال الكهربائية</h3>
+                <p>
+                  نقوم باكتشاف الأعطال الكهربائية بدقة ونصلحها لضمان عمل آمن
+                  وسلس.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div
+            class="col-lg-4 col-md-6 mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="service-card glass-effect">
+              <div class="service-image">
+                <img src="./img/item-6.jpeg" alt="معالجة تسرب المياه" />
+              </div>
+              <div class="service-content">
+                <h3>💧 معالجة تسرب المياه</h3>
+                <p>
+                  حلول فورية وفعالة لتسربات المياه، مع صيانة تضمن العودة لوضع
+                  التشغيل الطبيعي.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- advantages -->
+    <section class="features margin-b-100" id="advanages">
+      <h2 class="text-center animated-border">لماذا تختار <span class="highlight">FixSpin</span> لصيانة غسالاتك؟</h2>
+
+
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-12 mb-4">
+          <div class="image-container">
+            <!-- Row 1: Problem + Logo -->
+            <div
+              class="top-row d-flex justify-content-center align-items-center gap-3"
+            >
+              <img
+                class="img-fluid problem-img"
+                src="./img/item-11.jpeg"
+                alt="المشكلة"
+              />
+              <div class="horizontal-arrow text-center">
+                <div
+                  class="arrow-left arrow d-flex justify-content-center align-items-center"
+                >
+                  <img src="./img/download.png" style="width: 80%" />
+                </div>
+              </div>
+              <img
+                class="img-fluid fixspin-logo d-flex justify-content-center align-items-center"
+                src="./img/WhatsApp_Image_2025-04-21_at_19.45.50_a0e4ea57-removebg-preview.png"
+                alt="FixSpin Logo"
+              />
+            </div>
+
+            <!-- Arrow (between rows) -->
+            <div
+              class="arrow-container text-center d-flex justify-content-center"
+            >
+              <div class="arrow my-3">
+                <img src="./img/images (4).png" style="width: 100%" />
+              </div>
+            </div>
+
+            <!-- Row 2: Solved -->
+            <div class="bottom-row text-center">
+              <img
+                class="img-fluid solved-img"
+                src="./img/download__6_-removebg-preview.png"
+                alt="الحل"
+              />
+            </div>
+          </div>
+        </div>
+
+     
+<div class="col-lg-6 col-md-12 my-5">
+  <div class="feature-cards wow fadeInUp" data-wow-delay="0.2s">
+    <div class="feature-card">
+      <div class="icon">🛠️</div>
+      <h4>خبرة عالية</h4>
+      <p>
+        نحن خبراء في صيانة الغسالات بجميع أنواعها، مع فريق فني متخصص
+        يعمل بكفاءة ودقة.
+      </p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">⚡</div>
+      <h4>سرعة في الاستجابة</h4>
+      <p>
+        نحن نضمن سرعة في الاستجابة لحل جميع المشاكل بشكل فوري وفي وقت
+        قياسي.
+      </p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🔍</div>
+      <h4>تشخيص دقيق</h4>
+      <p>
+        نقوم بتشخيص المشكلة بدقة لتقديم الحل الأنسب وتفادي الأعطال
+        المتكررة.
+      </p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🧼</div>
+      <h4>تنظيف شامل</h4>
+      <p>
+        نوفر خدمات تنظيف داخلية وخارجية للغسالة لزيادة كفاءتها وعمرها
+        الافتراضي.
+      </p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">📅</div>
+      <h4>حجوزات مرنة</h4>
+      <p>نوفر مواعيد زيارة مرنة تناسب جدولك اليومي بكل سهولة.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">💰</div>
+      <h4>أسعار شفافة</h4>
+      <p>
+        نقدم أسعاراً عادلة وشفافة مع عدم وجود أي رسوم خفية، فقط تعرف على
+        تكلفة الخدمة منذ البداية.
+      </p>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </section>
+
+<!-- reviws -->
+<!-- Swiper Container -->
+<section class="fixspin-reviews py-5" id="reviwes">
+  <div class="text-center mb-4">
+    <h2 class="section-title">آراء عملائنا</h2>
+    <p class="section-subtitle">تجارب حقيقية تثبت تميز FixSpin في صيانة الغسالات</p>
+  </div>
+
+ <!-- Swiper Container -->
+<section class="review-section py-5">
+  <div class="container">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide review-card">
+          <p>خدمة ممتازة! جاء الفني في الوقت المحدد وتم إصلاح الغسالة بسرعة.</p>
+          <h5>أم خالد</h5>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide review-card">
+          <p>تعامل راقٍ وأسعار مناسبة، أوصي بخدماتهم بشدة.</p>
+          <h5>محمد الزهراني</h5>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide review-card">
+          <p>فريق محترف وتشخيص دقيق للمشكلة، شكراً لكم!</p>
+          <h5>نوف</h5>
+        </div>
+        <!-- Slide 4 -->
+        <div class="swiper-slide review-card">
+          <p>خدمة رائعة وتنظيف شامل، لاحظت فرقاً في أداء الغسالة.</p>
+          <h5>سالم الغامدي</h5>
+        </div>
+        <!-- Slide 5 -->
+        <div class="swiper-slide review-card">
+          <p>أعجبني سهولة الحجز وسرعة الاستجابة، ممتاز!</p>
+          <h5>ليلى</h5>
+        </div>
+      </div>
+      <!-- Optional Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+</section>
+
+<!-- footer -->
+<footer class="site-footer" id="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h3>FixSpin</h3>
+        <p>خدمات احترافية لصيانة وتنظيف الغسالات بكفاءة عالية.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>روابط مهمة</h4>
+        <ul>
+          <li><a href="#">الرئيسية</a></li>
+          <li><a href="#">خدماتنا</a></li>
+          <li><a href="#">الآراء</a></li>
+          <li><a href="#">تواصل معنا</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>تواصل معنا</h4>
+        <p>📞 01148656379</p>
+        <p>📞 01095973061</p>
+        <p>✉️ shabanyhyy124@gmail.com</p>
+      
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 FixSpin. جميع الحقوق محفوظة.</p>
+      <p class="text-gold">Designed by GMT</p>
+    </div>
+  </div>
+</footer>
+
+ <a id="fixspin-back-to-top" href="#" class="on">
+      <div class="fixspin-btt-wrapper">
+        <div class="fixspin-btt-text">
+          <span class="fixspin-btt-top">GO</span>
+          <span class="fixspin-btt-bottom"UP</span>
+        </div>
+      </div>
+      <span class="fixspin-icon-stack">
+        <i class="fa fa-angle-up"></i>
+      </span>
+    </a>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+          duration: 1200, // Animation duration
+          offset: 100, // Distance to start the animation
+          delay: 100, // Delay before animation starts
+          easing: "ease-in-out",
+          once: true, // Animation happens only once (on scroll)
+        });
+      });
+
+      const images = ["./img/testimonial-one-bg.jpg", "./img/item-2.jpeg"];
+      let currentIndex = 0;
+      const bgDiv = document.querySelector(".hero-bg");
+
+      if (bgDiv) {
+        bgDiv.style.backgroundImage = `url('${images[0]}')`;
+        setInterval(() => {
+          currentIndex = (currentIndex + 1) % images.length;
+          bgDiv.style.backgroundImage = `url('${images[currentIndex]}')`;
+        }, 7000);
+      }
+
+      window.addEventListener("scroll", () => {
+        const navbar = document.querySelector(".navbar");
+        navbar.classList.toggle("navbar-scrolled", window.scrollY > 50);
+      });
+
+      //test
+      window.addEventListener("DOMContentLoaded", function () {
+        const topRow = document.querySelector(".top-row");
+        const bottomRow = document.querySelector(".bottom-row");
+        const arrowContainer = document.querySelector(".arrow-container");
+
+        setTimeout(function () {
+          topRow.classList.add("active");
+          bottomRow.classList.add("active");
+          arrowContainer.classList.add("active");
+        }, 1000); // Start animations after 1 second
+      });
+    //   swiper
+
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    grabCursor: true,
+    centeredSlides: false,
+    slidesPerView: 3,
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 3000, // 4 seconds between slides
+      disableOnInteraction: false, // continue autoplay after touch
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      }
+    }
+  });
+
+//   
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.getElementById("fixspin-back-to-top");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 100) {
+      button.classList.add("show");
+    } else {
+      button.classList.remove("show");
+    }
+  });
+
+  button.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
+   </script>
+  </body>
+</html>
