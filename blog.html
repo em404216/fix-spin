@@ -9,6 +9,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./main.css">
+  
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
@@ -17,7 +19,7 @@
   <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
     <h1 class="hero-title">مرحبًا بك في  <span style="color: #f1d551;">FIX-SPIN</span> خدمات صيانة الغسالات</h1>
     <p class="hero-subtitle">أفضل خدمة لصيانة جميع أنواع الغسالات بأعلى جودة.</p>
-    <button class="hero-btn">احجز الآن</button>
+    <button class="hero-btn open-booking-modal">احجز الآن</button>
   </div>
   <div class="hero-background"></div>
   <div class="hero-shapes">
@@ -88,15 +90,128 @@
     <a href="#" class="read-more">اقرأ المزيد</a>
   </article>
 </section>
+<div id="bookingModal" class="modal-overlay">
+  <div class="modal-content" data-aos="zoom-in">
+   <lottie-player
+  src="https://lottie.host/79f33c9c-d7f8-47ce-b309-3fa61c4f7604/sqh3GGvAMf.json"
+  background="transparent"
+  speed="1"
+  style="width: 120px; height: 120px; margin: 0 auto 20px;"
+  loop
+  autoplay>
+</lottie-player>
 
+
+    <span class="close-modal">&times;</span>
+    <h2 class="book-now-title">احجز الآن</h2>
+    <p class="book-now-text">تقديم جميع الخدمات الخاصة بالغسالات بأعلى جودة وبأسعار مناسبة.</p>
+
+    <form id="whatsappBookingForm" class="book-now-form">
+      <input type="text" id="name" placeholder="الاسم الكامل" required>
+      <input type="tel" id="phone" placeholder="رقم الجوال" required>
+      <select id="service" required>
+        <option value="">نوع الخدمة</option>
+        <option value="صيانة">صيانة</option>
+        <option value="تركيب">تركيب</option>
+        <option value="تنظيف">تنظيف</option>
+      </select>
+      <textarea id="message" placeholder="اكتب تفاصيل الخدمة المطلوبة" rows="4" required></textarea>
+      <button type="submit" class="book-now-btn animate-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 20px; margin-left: 8px;">
+        إرسال عبر واتساب
+      </button>
+      <p id="formSuccess" class="success-message" style="display:none; color: var(--accent-color); font-weight: bold;">✅ تم تجهيز الرسالة! جاري تحويلك إلى واتساب...</p>
+    </form>
+  </div>
+</div>
 <footer class="footer">
   <p>جميع الحقوق محفوظة © المهندس شعبان يحي</p>
+   <div class="credits">
+          تصميم بواسطة
+          <a
+            href="https://www.facebook.com/profile.php/?id=100090592885243"
+            target="_blank"
+            >GMT</a
+          >
+        </div>
 </footer>
 
 <script>
   AOS.init();
   gsap.from(".blog-title", { y: -50, opacity: 0, duration: 1 });
   gsap.from(".blog-subtitle", { y: -20, opacity: 0, delay: 0.5, duration: 1 });
+
+
+   const openModalBtn = document.querySelector('.open-booking-modal');
+  const closeModalBtn = document.querySelector('.close-modal');
+  const modalOverlay = document.getElementById('bookingModal');
+  const modalContent = document.querySelector('.modal-content');
+  const form = document.getElementById('whatsappBookingForm');
+
+  // 🔹 Open Modal with GSAP
+  openModalBtn.addEventListener('click', () => {
+    modalOverlay.style.display = 'flex';
+    gsap.fromTo(modalContent,
+      { y: -100, opacity: 0, scale: 0.7, rotateX: -30 },
+      { y: 0, opacity: 1, scale: 1, rotateX: 0, duration: 0.8, ease: "back.out(1.7)" }
+    );
+  });
+
+  // 🔹 Close Modal with GSAP
+  closeModalBtn.addEventListener('click', () => {
+    gsap.to(modalContent, {
+      y: 50,
+      opacity: 0,
+      scale: 0.8,
+      rotateX: 15,
+      duration: 0.4,
+      ease: "power1.in",
+      onComplete: () => {
+        modalOverlay.style.display = 'none';
+      }
+    });
+  });
+
+  // 🔹 WhatsApp Booking Submission
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const service = document.getElementById('service').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !phone || !service || !message) {
+      alert("يرجى تعبئة جميع الحقول");
+      return;
+    }
+
+    const fullMessage = `مرحبًا، اسمي ${name}.\nأرغب في حجز خدمة: ${service}.\nرقم الجوال: ${phone}\nتفاصيل:\n${message}`;
+    const encoded = encodeURIComponent(fullMessage);
+    const phoneNumber = "01095973061"; // Your WhatsApp number
+
+    alert("✅ تم تجهيز الطلب! سيتم توجيهك إلى واتساب الآن...");
+
+    // Close the modal with animation
+    gsap.to(modalContent, {
+      y: 50,
+      opacity: 0,
+      scale: 0.8,
+      rotateX: 15,
+      duration: 0.4,
+      ease: "power1.in",
+      onComplete: () => {
+        modalOverlay.style.display = 'none';
+        // Redirect to WhatsApp
+        setTimeout(() => {
+          window.open(`https://wa.me/${phoneNumber}?text=${encoded}`, '_blank');
+        }, 300);
+      }
+    });
+  });
+
+
+
 </script>
 
 </body>
